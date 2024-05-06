@@ -1,0 +1,23 @@
+body {
+    font-family: 'Helvetica';
+    overflow: hidden;
+}
+
+#canvas {
+    display : block;
+    margin: 0 auto;
+    border: 2px solid red;
+}
+
+#controls {
+    text-align: center;
+}
+
+#score {
+    font-size: 200%;
+    text-align: center;
+}
+
+#player1 {
+    padding-right: 100px;
+}

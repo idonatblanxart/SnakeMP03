@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Canvas</title>
+    <meta charset="utf-8"/>
+    <script type="text/javascript" src="../SnakeLib.js"></script>
+    <script>
+      Init = function()
+      {
+        Game = SnakeLib;
+        Game.HTML.Canvas = document.getElementById("canvas");
+        Game.Init(false);
+        Game.StartGame();
+      }
+    document.addEventListener("DOMContentLoaded",Init,false);
+    </script>
+  </head>
+    <body>
+      <canvas id="canvas" width=800 height=350 style="border: dotted 1px black">
+      Please update your browser to one that supports HTML5 and Canvas
+      </canvas>
+    </body>
+  </html>

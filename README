@@ -1,0 +1,37 @@
+A library for making Snake games in Javascript and Canvas/HTML5.
+It provides basic customisation support:
+* 1 or 2 players
+* Visual timer
+* Visual score
+* You decide what element to use for displaying information
+* Give the snake a name
+* Decide snake color
+
+You get score depending on how long you are.
+The game has 3 different colored fruit:
+* Blue only lengthens the snake
+* Green only gives score
+* Red gives both score and length
+
+A minimal setup could be:
+MinimalGame = SnakeLib;
+MinimalGame.HTML.Canvas = document.getElementById("myCanvas");
+MinimalGame.Init();
+MinimalGame.StartGame();
+
+This will start a singleplayer game with a black snake called "Snake".
+There will be no timelimit.
+
+SnakeLib.HTML.Canvas is mandatory and must be set before running Init();
+It must be a canvas HTML element.
+
+Following settings are optional (Score2 is only needed if MultiPlayer is true):
+* SnakeLib.Settings.MultiPlayer = bool;
+* SnakeLib.Player.Color = string;
+* SnakeLib.Player.Name = string;
+* SnakeLib.Settings.ShowTimer = bool;
+** SnakeLib.Settings.Timer = seconds or "infinity";
+** SnakeLib.HTML.Timer = HTML element;
+* SnakeLib.Settings.ShowScore = bool;
+** SnakeLib.HTML.Score1 = HTML element;
+** SnakeLib.HTML.Score2 = HTML element;

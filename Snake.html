@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Canvas</title>
+    <meta charset="utf-8"/>
+    <script type="text/javascript" src="SnakeLib.js"></script>
+    <script type="text/javascript" src="Snake.js"></script>
+    <link rel="stylesheet" href="Snake.css">
+  </head>
+    <body>
+      <canvas id="canvas" width=800 height=350>
+      Please update your browser to one that supports HTML5 and Canvas
+      </canvas>
+
+      <form id="controls">
+        <br />
+        2 Players: <input id="multiplayer" checked="true" onchange="DisplayPlayer2(this.checked)" type="checkbox"/>
+        <br />
+
+        <div id="controls1">
+          Player 1 name:
+          <input type="text" id="name1"/>
+          Player 1 colour:
+          <select id="color1" style="border:1;">
+            <option>Red</option>
+            <option value="#00ff00">Green</option>
+            <option>Blue</option>
+            <option>Black</option>
+          </select>
+        </div>
+
+        <div id="controls2">
+          Player 2 name:
+          <input type="text" id="name2"/>
+          Player 2 colour:
+          <select id="color2" style="border:1;">
+            <option>Red</option>
+            <option value="#00ff00">Green</option>
+            <option>Blue</option>
+            <option>Black</option>
+          </select>
+        </div>
+
+        Play for
+        <select id="timerinput">
+          <option value="60">1 minute</option>
+          <option value="120">2 minutes</option>
+          <option value="300">5 minutes</option>
+          <option value="infinite">always</option>
+        </select>
+        <br />
+
+        <input type="button" value="Play!" onclick="StartGame()"/>
+      </form>
+      
+      <br />
+
+      <div id="score" style="visibility:hidden">
+        <span style="color: " id="score1"></span>
+        <span style="color: " id="score2"></span>
+      </div>
+      <p id="timer" style="font-size:50px;text-align:center;margin:0;margin-top:10px"></p>
+    </body>
+  </html>
